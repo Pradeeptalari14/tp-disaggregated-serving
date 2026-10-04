@@ -1,0 +1,10 @@
+{
+  "kv_transfer_config": {
+    "transport_type": "ROCEV2",
+    "rdma_device": "mlx5_0",
+    "port": 18515,
+    "chunk_size_bytes": 4194304,
+    "buffer_pool_size_gb": 32,
+    "enable_zero_copy": true
+  }
+}

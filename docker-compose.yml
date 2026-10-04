@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  prefill-node:
+    image: python:3.11-slim
+    command: python -c "print('Prefill node running')"
+  decode-node:
+    image: python:3.11-slim
+    command: python -c "print('Decode node running')"

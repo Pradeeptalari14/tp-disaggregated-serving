@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm-prefill-cluster
+  namespace: llm-serving
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vllm-prefill
+  template:
+    metadata:
+      labels:
+        app: vllm-prefill
+    spec:
+      containers:
+        - name: vllm-prefill
+          image: vllm/vllm-openai:v0.6.3
+          args:
+            - "--enable-disaggregated-prefill"
+            - "--kv-transfer-config"
+            - "/etc/mooncake/config.json"
+          resources:
+            limits:
+              nvidia.com/gpu: "2"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm-decode-cluster
+  namespace: llm-serving
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: vllm-decode
+  template:
+    metadata:
+      labels:
+        app: vllm-decode
+    spec:
+      containers:
+        - name: vllm-decode
+          image: vllm/vllm-openai:v0.6.3
+          args:
+            - "--enable-disaggregated-decode"
+            - "--kv-transfer-config"
+            - "/etc/mooncake/config.json"
+          resources:
+            limits:
+              nvidia.com/gpu: "1"
