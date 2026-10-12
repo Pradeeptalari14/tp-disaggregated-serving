@@ -1,3 +1,6 @@
+[![Ecosystem](https://img.shields.io/badge/Portfolio%20Ecosystem-341%20Studios-6366f1.svg)](https://pradeeptalari.me/projects/)
+[![Architecture DAG](https://img.shields.io/badge/Architecture-DAG%20%26%20Course-10b981.svg)](https://pradeeptalari.me/tools/repo-learning/)
+
 # ⚡ Disaggregated Prefill & Decode Serving Studio
 
 [![CI SRE Validation](https://github.com/Pradeeptalari14/tp-disaggregated-serving/actions/workflows/disaggregated-ci.yml/badge.svg)](https://github.com/Pradeeptalari14/tp-disaggregated-serving/actions)
@@ -193,3 +196,6 @@ tp-disaggregated-serving/
 
 - **License:** [MIT License](LICENSE)
 - **Attribution:** Maintained by **[Talari Pradeep](https://talaripradeep.info/)** · AI Infrastructure & Platform SRE Lead
+
+---
+*Synchronized with [Disaggregated Prefill & Decode Serving Studio Studio](https://pradeeptalari.me/tools/disaggregated-prefill-decode/) & [Repository Learning DAG](https://pradeeptalari.me/tools/repo-learning/) — [Talari Pradeep Portfolio](https://pradeeptalari.me)*
